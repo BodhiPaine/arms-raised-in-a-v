@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arms Raise in a V</title>
+    <title>Arms Raised in a V</title>
     <style>
         body {
             font-family: Georgia, serif;
@@ -53,16 +53,14 @@
 </head>
 <body>
     <header>
-        <h1>My Hypertext Manuscript</h1>
-        <p class="meta">An evolving, open-access exploration</p>
-        <p class="meta"><strong>Last updated:</strong> [Date will be added automatically]</p>
+        <h1>Arms Raised in a V</h1>
+        <p class="meta">An evolving digital-garden experiment by Bodhi 心 Paine, using free and open-source tools for thinking- and learning-in-public</p>
     </header>
 
     <nav>
         <h2>Table of Contents</h2>
         <ul>
             <!-- EDIT THIS SECTION: Add or remove links as needed -->
-            <li><a href="readme.md">📖 Start Here (README)</a></li>
             <li><a href="Arms Raised in a V.md">Arms Raised in a V</a></li>
             <li><a href="chapter-02.md">Chapter 2</a></li>
             <li><a href="concept-a.md">Concept A</a></li>
