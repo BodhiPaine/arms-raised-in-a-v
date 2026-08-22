@@ -11,10 +11,14 @@
             "id": "cd7f7cd3e0e742e3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Arms Raised in a V.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Arms Raised in a V"
             }
           }
         ]
@@ -183,6 +187,8 @@
   },
   "active": "cd7f7cd3e0e742e3",
   "lastOpenFiles": [
+    "index.md",
+    "Arms Raised in a V.md",
     "tags/index-og-image.webp",
     "tags/index",
     "tags/index.html",
@@ -203,7 +209,6 @@
     "arms-raised-in-a-v/poetry/untitled-og-image.webp",
     "arms-raised-in-a-v/poetry/untitled-1-og-image.webp",
     "arms-raised-in-a-v/poetry/index-og-image.webp",
-    "arms-raised-in-a-v/about/index-og-image.webp",
     "not quite hacking.md",
     "the dead lay.md"
   ]
