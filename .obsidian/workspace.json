@@ -8,33 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "adee9d39fa89d7cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "the dead lay.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "the dead lay"
-            }
-          },
-          {
             "id": "dfa9d7df0bca43ad",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "not-quite-hacking-og-image.webp"
-              },
-              "icon": "lucide-image",
-              "title": "not-quite-hacking-og-image"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "not-quite-hacking-og-image.webp",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "not-quite-hacking-og-image.webp",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -174,7 +155,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "not-quite-hacking-og-image.webp",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -203,28 +183,28 @@
   },
   "active": "dfa9d7df0bca43ad",
   "lastOpenFiles": [
-    "index.html",
-    "untitled folder",
+    "tags/index-og-image.webp",
     "tags/index",
+    "tags/index.html",
+    "static/resource-after-8b336f9a.js",
+    "static/resource-after-baba652b.js",
+    "static/resource-style-d3a1a224.css",
+    "static/resource-after-e13fffa1.js",
+    "static/scripts/script-9-296b30c3.js",
+    "static/scripts/script-8-632b2822.js",
+    "static/scripts/script-7-5ef560a8.js",
+    "static/scripts/script-6-7e107d7e.js",
+    "static/og-image.png",
+    "static/icon.png",
     "poetry/index-og-image.webp",
     "poetry/untitled-og-image.webp",
     "poetry/untitled-1-og-image.webp",
-    "poetry/untitled-1.html",
-    "poetry/spielberg-said-back-to-the-future.docx",
-    "poetry/in-the-cemetery_like-a-numpty.pdf",
-    "poetry/snap-back-to-reality.pdf",
-    "poetry/index.html",
-    "poetry/spielberg-said-back-to-the-future.pdf",
-    "poetry/untitled.html",
-    "poetry",
-    "about/index-og-image.webp",
-    "about/about-jeremy-og-image.webp",
-    "the-dead-lay-og-image.webp",
-    "arms-raised-in-a-v-og-image.webp",
+    "arms-raised-in-a-v/index-og-image.webp",
+    "arms-raised-in-a-v/poetry/untitled-og-image.webp",
+    "arms-raised-in-a-v/poetry/untitled-1-og-image.webp",
+    "arms-raised-in-a-v/poetry/index-og-image.webp",
+    "arms-raised-in-a-v/about/index-og-image.webp",
     "not quite hacking.md",
-    "not-quite-hacking-og-image.webp",
-    "the dead lay.md",
-    "tags/index-og-image.webp",
-    "static/og-image.png"
+    "the dead lay.md"
   ]
 }
