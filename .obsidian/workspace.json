@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arms Raised in a V.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arms Raised in a V"
+              "title": "index"
             }
           }
         ]
@@ -187,8 +187,12 @@
   },
   "active": "cd7f7cd3e0e742e3",
   "lastOpenFiles": [
-    "index.md",
+    "_posts/2026-08-22-arms-raised-in-a-v.md",
+    "2026-08-22-arms-raised-in-a-v.md",
+    "_posts",
+    "untitled folder",
     "Arms Raised in a V.md",
+    "index.md",
     "tags/index-og-image.webp",
     "tags/index",
     "tags/index.html",
@@ -198,8 +202,6 @@
     "static/resource-after-e13fffa1.js",
     "static/scripts/script-9-296b30c3.js",
     "static/scripts/script-8-632b2822.js",
-    "static/scripts/script-7-5ef560a8.js",
-    "static/scripts/script-6-7e107d7e.js",
     "static/og-image.png",
     "static/icon.png",
     "poetry/index-og-image.webp",
