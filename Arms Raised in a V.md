@@ -1,1 +1,1 @@
-*the website of poet, essayist and dhamma practitioner, Jeremy Sekha*
+*the website of poet, essayist and dhamma practitioner, Jeremy Seekha*
