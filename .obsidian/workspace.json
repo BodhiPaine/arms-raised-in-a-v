@@ -25,14 +25,12 @@
             "id": "dfa9d7df0bca43ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "not quite hacking.md",
-                "mode": "source",
-                "source": false
+                "file": "not-quite-hacking-og-image.webp"
               },
-              "icon": "lucide-file",
-              "title": "not quite hacking"
+              "icon": "lucide-image",
+              "title": "not-quite-hacking-og-image"
             }
           }
         ],
@@ -114,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "not quite hacking.md",
+                "file": "not-quite-hacking-og-image.webp",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "not quite hacking.md",
+                "file": "not-quite-hacking-og-image.webp",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "not quite hacking.md",
+                "file": "not-quite-hacking-og-image.webp",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -203,12 +201,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "0d8e8cda618376f2",
+  "active": "dfa9d7df0bca43ad",
   "lastOpenFiles": [
+    "not quite hacking.md",
     "not-quite-hacking.html",
     "not-quite-hacking-og-image.webp",
     "the dead lay.md",
-    "not quite hacking.md",
     "tags/index-og-image.webp",
     "tags/index.html",
     "static/resource-after-8b336f9a.js",
@@ -219,7 +217,6 @@
     "static/scripts/script-8-632b2822.js",
     "static/scripts/script-7-5ef560a8.js",
     "static/scripts/script-6-7e107d7e.js",
-    "static/scripts/script-5-cc8afa9d.js",
     "static/og-image.png",
     "static/icon.png",
     "arms-raised-in-a-v/index-og-image.webp",
