@@ -1,0 +1,9 @@
+title: Arms Raised in a V
+description: An evolving digital-garden experiment by Bodhi 心 Paine
+baseurl: "/arms-raised-in-a-v"
+url: "https://bodhipaine.github.io"
+
+theme: minima
+markdown: kramdown
+
+exclude: ["node_modules/", "public/", "quartz/"]
