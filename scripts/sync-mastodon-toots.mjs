@@ -2,7 +2,7 @@
 // Pulls all toots for a Mastodon account via the public REST API and writes
 // each one as an individual Obsidian-flavored Markdown note.
 //
-// Config (env vars, all can also go in a local .env-style export before running):
+// Defaults to @bodhipaine@mastodon.social. Config (env vars, all optional):
 //   MASTODON_INSTANCE   e.g. "mastodon.social" (no protocol, no trailing slash)
 //   MASTODON_USERNAME   e.g. "bodhipaine" (no leading @)
 //   MASTODON_OUT_DIR    default "Mastodon"
@@ -15,23 +15,14 @@
 import { mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const INSTANCE = requireEnv("MASTODON_INSTANCE");
-const USERNAME = requireEnv("MASTODON_USERNAME").replace(/^@/, "");
+const DEFAULT_INSTANCE = "mastodon.social";
+const DEFAULT_USERNAME = "bodhipaine";
+
+const INSTANCE = process.env.MASTODON_INSTANCE || DEFAULT_INSTANCE;
+const USERNAME = (process.env.MASTODON_USERNAME || DEFAULT_USERNAME).replace(/^@/, "");
 const OUT_DIR = process.env.MASTODON_OUT_DIR || "Mastodon";
 const EXCLUDE_REPLIES = (process.env.MASTODON_EXCLUDE_REPLIES || "false") === "true";
 const EXCLUDE_REBLOGS = (process.env.MASTODON_EXCLUDE_REBLOGS || "true") === "true";
-
-function requireEnv(name) {
-  const value = process.env[name];
-  if (!value) {
-    console.error(
-      `Missing required env var ${name}. Set MASTODON_INSTANCE and MASTODON_USERNAME before running.\n` +
-        `Example: MASTODON_INSTANCE=mastodon.social MASTODON_USERNAME=bodhipaine node scripts/sync-mastodon-toots.mjs`
-    );
-    process.exit(1);
-  }
-  return value;
-}
 
 const API_BASE = `https://${INSTANCE}/api/v1`;
 

@@ -13,10 +13,16 @@ Each note is idempotent by toot ID: rerunning the script only adds notes
 for toots it hasn't seen yet, named `Mastodon/<date>-<toot-id>.md`, with
 frontmatter (`title`, `date`, `mastodon_id`, `url`, `tags`, `visibility`).
 
-### Run it manually
+Defaults to `@bodhipaine@mastodon.social`. Run it as-is:
 
 ```sh
-MASTODON_INSTANCE=mastodon.social MASTODON_USERNAME=yourname \
+npm run sync-toots
+```
+
+or override for a different account:
+
+```sh
+MASTODON_INSTANCE=example.social MASTODON_USERNAME=someone \
   npm run sync-toots
 ```
 
@@ -25,6 +31,7 @@ is already visible on the public profile — no access token required.
 
 Optional env vars:
 
+- `MASTODON_INSTANCE` / `MASTODON_USERNAME` — override the account (defaults above)
 - `MASTODON_OUT_DIR` — output folder (default `Mastodon`)
 - `MASTODON_EXCLUDE_REPLIES` — `"true"` to skip replies (default `"false"`)
 - `MASTODON_EXCLUDE_REBLOGS` — `"true"` to skip boosts (default `"true"`)
@@ -32,11 +39,12 @@ Optional env vars:
 ### Automated daily sync
 
 `.github/workflows/sync-mastodon-toots.yml` runs the same script on a
-schedule and commits any new notes. To enable it, set two repository
-variables under **Settings → Secrets and variables → Actions → Variables**:
+schedule and commits any new notes — no setup required, since it uses the
+same defaults as above. If you ever want to point it at a different
+account, set repository variables `MASTODON_INSTANCE` and
+`MASTODON_USERNAME` under **Settings → Secrets and variables → Actions →
+Variables**; they override the script's defaults.
 
-- `MASTODON_INSTANCE`
-- `MASTODON_USERNAME`
-
-You can also trigger it on demand from the **Actions** tab
-(`Sync Mastodon Toots` → *Run workflow*).
+You can trigger it on demand from the **Actions** tab
+(`Sync Mastodon Toots` → *Run workflow*) — worth doing once to do the
+initial backfill of your full toot history.
