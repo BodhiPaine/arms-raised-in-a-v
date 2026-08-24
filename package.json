@@ -1,0 +1,8 @@
+{
+  "name": "arms-raised-in-a-v",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-toots": "node scripts/sync-mastodon-toots.mjs"
+  }
+}
