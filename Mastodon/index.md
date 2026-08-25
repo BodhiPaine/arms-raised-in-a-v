@@ -5,6 +5,12 @@ title: "Mastodon"
 
 Toots synced from [@bodhipaine@mastodon.social](https://mastodon.social/@bodhipaine), newest first.
 
+- 2026-08-25 — [@Daojoan Why ignore them? What do you mean by anti-signal?](./2026-08-25-117155041036770259.html)
+- 2026-08-25 — [Sure I achieved some high-quality #peace but I have wanted to write a serious #…](./2026-08-25-117155030939003286.html)
+- 2026-08-25 — [So stoked about this that I am reporting this first, before I even start making…](./2026-08-25-117155011128003358.html)
+- 2026-08-25 — [I am incredibly proud of this messy little nascent blob of anarchish indie-publ…](./2026-08-25-117154998553336771.html)
+- 2026-08-25 — [I have finished my stay at the monastery for now, and after three months with a…](./2026-08-25-117154970059879474.html)
+- 2026-08-25 — [@369ONE You’re very welcome, I am glad it resonated! with you :)](./2026-08-25-117154876855872526.html)
 - 2026-05-15 — [a bowl in a cave](./2026-05-15-116578669360883904.html)
 - 2026-05-15 — [I thought the sign said “Fig Tree”, but no](./2026-05-15-116578660040599644.html)
 - 2026-05-15 — [meditation huts overgrown by fig roots #iconic at](./2026-05-15-116578648340161682.html)
@@ -210,7 +216,7 @@ Toots synced from [@bodhipaine@mastodon.social](https://mastodon.social/@bodhipa
 - 2026-03-12 — [Puts a new spin on the phrase, “you get what you paid for”.](./2026-03-12-116218913188848984.html)
 - 2026-03-12 — [What are your strategies for protecting your attention span among the mauling c…](./2026-03-12-116214786075549819.html)
 - 2026-03-09 — ["If you have something bad smelling in your pocket, wherever you go it will sme…](./2026-03-09-116197323154175364.html)
-- 2026-03-09 — [*(no text content)*](./2026-03-09-116196795825594134.html)
+- 2026-03-09 — [Untitled toot](./2026-03-09-116196795825594134.html)
 - 2026-03-09 — [In this short animated film, a perverted Christian missionary confronts his unc…](./2026-03-09-116196752125768237.html)
 - 2026-03-07 — [RE: https://oldfriends.live/@paul/116179755247089226](./2026-03-07-116189670259398916.html)
 - 2026-03-07 — [@paul “Now I gotta go to court, because I got robbed”!](./2026-03-07-116189668347914920.html)
