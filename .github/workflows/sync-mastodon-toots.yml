@@ -1,0 +1,38 @@
+name: Sync Mastodon Toots
+
+on:
+  schedule:
+    # Runs once a day. GitHub Actions cron is UTC.
+    - cron: "17 13 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch toots and write notes
+        env:
+          MASTODON_INSTANCE: ${{ vars.MASTODON_INSTANCE }}
+          MASTODON_USERNAME: ${{ vars.MASTODON_USERNAME }}
+        run: node scripts/sync-mastodon-toots.mjs
+
+      - name: Commit new notes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Mastodon/
+          if git diff --cached --quiet; then
+            echo "No new toots to commit."
+          else
+            git commit -m "Sync Mastodon toots"
+            git push
+          fi
