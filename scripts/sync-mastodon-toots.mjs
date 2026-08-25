@@ -119,6 +119,14 @@ function slugifyTitle(text, maxLen = 80) {
   return firstLine.length > maxLen ? `${firstLine.slice(0, maxLen - 1).trim()}…` : firstLine;
 }
 
+// Titles are derived from the Markdown body (which keeps paragraph breaks
+// as blank lines) rather than raw stripped HTML, so multi-paragraph toots
+// don't have their lines glued together with no separator. Markdown link
+// syntax is unwrapped back to plain text since titles shouldn't contain it.
+function plainTextForTitle(markdownBody) {
+  return markdownBody.replace(/\[([^\]]*)\]\([^)]+\)/g, "$1");
+}
+
 function yamlString(value) {
   return `"${String(value).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 }
@@ -131,8 +139,7 @@ function yamlList(values) {
 function buildNote(status) {
   const bodySource = status.spoiler_text ? status.spoiler_text : status.content;
   const markdownBody = htmlToMarkdown(bodySource);
-  const plainText = stripTags(bodySource);
-  const title = slugifyTitle(plainText || status.spoiler_text || "Untitled toot");
+  const title = slugifyTitle(plainTextForTitle(markdownBody) || status.spoiler_text || "Untitled toot");
   const tags = ["mastodon", ...status.tags.map((t) => t.name)];
   const date = status.created_at.slice(0, 10);
 
