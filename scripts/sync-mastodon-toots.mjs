@@ -114,9 +114,13 @@ function htmlToMarkdown(html) {
   return text.trim();
 }
 
+// Stops at the first real paragraph break (blank line); a single line break
+// within that paragraph (from a Mastodon <br>) is joined with a space rather
+// than truncating the title early.
 function slugifyTitle(text, maxLen = 80) {
-  const firstLine = text.split("\n").find((line) => line.trim().length > 0) || "Untitled toot";
-  return firstLine.length > maxLen ? `${firstLine.slice(0, maxLen - 1).trim()}…` : firstLine;
+  const firstParagraph = text.split(/\n\s*\n/).find((p) => p.trim().length > 0) || "Untitled toot";
+  const singleLine = firstParagraph.replace(/\s*\n\s*/g, " ").trim();
+  return singleLine.length > maxLen ? `${singleLine.slice(0, maxLen - 1).trim()}…` : singleLine;
 }
 
 // Titles are derived from the Markdown body (which keeps paragraph breaks
