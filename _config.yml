@@ -7,8 +7,11 @@ theme: minima
 markdown: kramdown
 
 # Without this, minima's header nav auto-lists every page on the site that
-# has a title - including every synced Mastodon note. An explicit (empty)
-# list overrides that default instead of scanning the whole site.
-header_pages: []
+# has a title - including every synced Mastodon note. header_pages overrides
+# that, but Liquid's `default` filter treats an *empty* array as "not set"
+# and falls back to listing everything anyway - so this points at a path
+# that matches no real page, giving header.html's for-loop something to
+# iterate that never resolves to a page and therefore never renders a link.
+header_pages: ["_no-header-links"]
 
 exclude: ["node_modules/", "public/", "quartz/"]
