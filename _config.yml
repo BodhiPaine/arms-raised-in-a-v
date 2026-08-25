@@ -6,4 +6,9 @@ url: "https://bodhipaine.github.io"
 theme: minima
 markdown: kramdown
 
+# Without this, minima's header nav auto-lists every page on the site that
+# has a title - including every synced Mastodon note. An explicit (empty)
+# list overrides that default instead of scanning the whole site.
+header_pages: []
+
 exclude: ["node_modules/", "public/", "quartz/"]
