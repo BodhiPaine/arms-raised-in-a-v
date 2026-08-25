@@ -154,6 +154,7 @@ function buildNote(status) {
 
   const frontmatter = [
     "---",
+    `layout: page`,
     `title: ${yamlString(title)}`,
     `date: ${status.created_at}`,
     `mastodon_id: ${yamlString(status.id)}`,
@@ -174,7 +175,31 @@ function buildNote(status) {
   }
   body += `\n\n[View on Mastodon](${status.url || status.uri})\n`;
 
-  return { filename: `${date}-${status.id}.md`, content: frontmatter + body };
+  const filename = `${date}-${status.id}.md`;
+  return { filename, content: frontmatter + body, title, date: status.created_at };
+}
+
+function buildIndex(notes) {
+  const sorted = [...notes].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const items = sorted.map((note) => {
+    const day = note.date.slice(0, 10);
+    const href = `./${note.filename.replace(/\.md$/, ".html")}`;
+    return `- ${day} — [${note.title}](${href})`;
+  });
+
+  return (
+    [
+      "---",
+      "layout: page",
+      `title: ${yamlString("Mastodon")}`,
+      "---",
+      "",
+      `Toots synced from [@${USERNAME}@${INSTANCE}](https://${INSTANCE}/@${USERNAME}), newest first.`,
+      "",
+      ...items,
+      "",
+    ].join("\n")
+  );
 }
 
 async function main() {
@@ -194,8 +219,8 @@ async function main() {
 
   let written = 0;
   let skipped = 0;
-  for (const status of statuses) {
-    const note = buildNote(status);
+  const notes = statuses.map(buildNote);
+  for (const note of notes) {
     if (existing.has(note.filename)) {
       skipped += 1;
       continue;
@@ -204,7 +229,9 @@ async function main() {
     written += 1;
   }
 
-  console.log(`Done. Wrote ${written} new note(s), skipped ${skipped} already-synced toot(s).`);
+  await writeFile(path.join(outPath, "index.md"), buildIndex(notes), "utf8");
+
+  console.log(`Done. Wrote ${written} new note(s), skipped ${skipped} already-synced toot(s). Regenerated index.`);
 }
 
 main().catch((err) => {
